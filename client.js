@@ -21,6 +21,9 @@ const connect = function () {
 
     // send the name to the server
     conn.write("Name: ___");
+
+    // send the initial move command
+    conn.write("Move: up");
   });
 
   return conn;
