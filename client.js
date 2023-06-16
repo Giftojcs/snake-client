@@ -15,6 +15,14 @@ const connect = function () {
     console.log("Server says:", data);
   });
 
+  // event handler for connection established
+  conn.on("connect", () => {
+    console.log("Successfully connected to the server!");
+
+    // send the name to the server
+    conn.write("Name: ___");
+  });
+
   return conn;
 };
 
